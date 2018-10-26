@@ -1,5 +1,6 @@
 package projeto.domain.entities;
 
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
@@ -7,6 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Pedido {
 	
 	private int quantidade;
+	@DBRef
 	private Produto produto;
 	private Double valorTotalPedido;
 	

@@ -1,6 +1,7 @@
 package projeto.domain.entities;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import projeto.Interfaces.Identificable;
@@ -12,6 +13,7 @@ public class Funcionario implements Identificable {
 	private String id;
 	private String nome;
 	private String registro;
+	@DBRef
 	private Usuario usuario;
 	
 	
